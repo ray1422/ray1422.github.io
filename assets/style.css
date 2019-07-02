@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, img, span {
+    margin: 0;
+    text-align: justify;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    background: #191f26 url('./images/loading.gif') no-repeat center / auto 50vh fixed;
+}
+
+#wrapper {
+    padding: 5em 0 5em 0;
+    position: fixed;
+    overflow-y: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: .2s;
+    height: 100vh;
+    border-radius: 0;
+    transition-duration: 2s;
+    background: #000000 url('../assets/images/background.jpg') no-repeat center / cover fixed;
+}
+
+.transferring {
+    opacity: 0;
+    transform: scale(2);
+    transition-duration: 1s;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+}
+
+#header #ray {
+    width: 20%;
+    overflow: hidden;
+    padding: 1em;
+}
+
+#header #ray img {
+    max-width: 100%;
+    border: solid white 6px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(10, 10, 10, .9);
+}
+
+#header #no_life {
+    padding: 1em 2em;
+    background: url("../assets/images/crystal.png") repeat;
+    background-size: 1em 1em;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .95;
+    filter: brightness(1.06) drop-shadow(1px 1px 3px rgba(10, 10, 10, .7));
+    font-weight: 600;
+}
+
+#header #no_life h1 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#header #no_life h4 {
+    padding-left: 3px;
+}
+
+.section {
+    position: relative;
+    width: 80%;
+    margin: 0 auto 2rem;
+    background: none;
+    padding: .2em 1em;
+    border-radius: 3rem;
+}
+
+.section h2 {
+    margin: .2em 0;
+    background: url(../assets/images/forst.png) repeat 0 0 / 2em auto;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: rgba(0, 200, 255, .6);
+    -webkit-text-fill-color: rgba(0, 200, 255, .6);
+    filter: drop-shadow(1px 1px 3px rgba(10, 10, 10, .5));
+}
+
+.section p.content:first-of-type {
+    margin-top: 0;
+}
+
+.section p.content {
+    background: url("../assets/images/crystal.png") repeat;
+    background-size: 1em 1em;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .95;
+    filter: brightness(1.06) drop-shadow(1px 1px 3px rgba(10, 10, 10, .7));
+    font-weight: 600;
+    margin: .5em 0;
+}
+
+.section::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    bottom: -3px;
+    left: -3px;
+    filter: blur(3px) brightness(60%);
+    background: url('../assets/images/background.jpg') no-repeat center / cover fixed;
+}
+
+::selection {
+    /* background: url('../assets/images/background.jpg') no-repeat center / cover fixed; */
+    background: rgba(10, 10, 10, .8);
+    -webkit-text-fill-color: rgba(100, 100, 100, .6);
+    -moz-text-fill-color: rgba(100, 100, 100, .6);
+    text-fill-color: rgba(100, 100, 100, .6);
+}

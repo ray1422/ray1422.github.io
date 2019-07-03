@@ -1,0 +1,69 @@
+#skill {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-top: 1em;
+}
+
+#skill>div {
+    display: flex;
+    width: 46%;
+    margin: .5rem 2%;
+    justify-content: center;
+    flex-direction: row;
+    padding: .2rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#skill>div>div:first-child {
+    width: 6em;
+    margin: auto .5em;
+    height: 1rem;
+    line-height: 1rem;
+}
+
+#skill>div>div:last-child {
+    width: 80%;
+    text-align: center;
+    line-height: 1rem;
+    height: 1rem;
+    margin-right: 10%;
+}
+
+#skill>div>div:last-child meter {
+    width: 100%;
+}
+
+#skill meter {
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#skill meter::-webkit-meter-bar {
+    background: rgba(250, 250, 250, .3);
+}
+
+#skill meter::-webkit-meter-optimum-value {
+    border-radius: 15px;
+    overflow: hidden;
+    background: #00c3ff linear-gradient(to bottom, rgba(227, 253, 255, 0.57) 0%, rgb(73, 210, 255) 50%, rgba(0, 134, 255, 0.34) 100%);
+    opacity: .9;
+}
+
+@media screen and (max-width: 1024px) {
+    #skill {
+        width: 100%;
+    }
+    #skill>div {
+        width: 90%;
+        margin: .8rem auto;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    ul {
+        padding-left: calc((100vw - 22em) / 2);
+    }
+}

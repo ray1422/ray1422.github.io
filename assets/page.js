@@ -40,12 +40,14 @@ function goPage(pagePath, state) {
 
         var now = new Date().getTime();
         $("#header > *").animate({ opacity: 0 }, 100)
+        $("#wrapper").css("overflow-y", 'hidden')
         if (pagePath == 'index.html' || pagePath == 'home') {
             setTimeout(() => { $("#header").removeClass("mini") }, 120)
         }
         else {
             setTimeout(() => { $("#header").addClass("mini") }, 120)
         }
+        setTimeout(() => { $("#wrapper").css("overflow-y", '') }, 1200);
 
         setTimeout(() => {
             $("#main").html($newMain.html()).removeClass("transferring")

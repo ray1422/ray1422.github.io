@@ -43,16 +43,20 @@ body {
     background: #000000 url('../assets/images/background.jpg') no-repeat center / cover fixed;
 }
 
-.transferring {
-    opacity: 0;
-    transform: scale(2);
+#main {
+    opacity: 1;
     transition-duration: 1s;
+}
+
+.transferring {
+    opacity: 0 !important;
+    transition-duration: 1s !important;
 }
 
 #header {
     display: flex;
     flex-direction: row;
-    transition: .5s;
+    transition: 1s;
     height: 11rem;
 }
 
@@ -195,10 +199,23 @@ body {
 .section {
     position: relative;
     width: 80%;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.5rem;
     background: none;
     padding: .2em 1em;
-    border-radius: 3rem;
+    /* border-radius: 3rem; */
+}
+
+.section.fixed {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.section.fixed .wrapper {
+    height: 95%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .section h2 {
@@ -211,11 +228,11 @@ body {
     filter: drop-shadow(1px 1px 3px rgba(10, 10, 10, .5));
 }
 
-.section p.content:first-of-type {
+.section .content:first-of-type {
     margin-top: 0;
 }
 
-.section p.content {
+.section .content {
     background: url("../assets/images/crystal.png") repeat;
     background-size: 1em 1em;
     -webkit-background-clip: text;
@@ -244,7 +261,6 @@ body {
     background: rgba(10, 10, 10, .8);
     -webkit-text-fill-color: rgba(100, 100, 100, .6);
     -moz-text-fill-color: rgba(100, 100, 100, .6);
-    text-fill-color: rgba(100, 100, 100, .6);
 }
 
 @media screen and (max-width: 1024px) {
@@ -252,7 +268,7 @@ body {
         background: rgba(10, 10, 10, .6);
     }
     .transferring {
-        transform: none;
+        opacity: 0;
     }
 }
 

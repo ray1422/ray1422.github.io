@@ -48,13 +48,13 @@ function goPage(pagePath, state) {
             setTimeout(() => { $("#header").addClass("mini") }, 120)
         }
         setTimeout(() => { $("#wrapper").css("overflow-y", '') }, 1200);
-
+        setTimeout(()=>{$("#main").html($newMain.html())}, 1100)
         setTimeout(() => {
-            $("#main").html($newMain.html()).removeClass("transferring")
+            $("#main").removeClass("transferring")
             $("#main_nav").html($newNav.html());
             $("#header > *").animate({ opacity: 1 }, 300);
             updateEventListener();
-        }, (1000 - now + startTime))
+        }, (1300 - now + startTime))
     })
 }
 

@@ -34,6 +34,7 @@ body, input {
 #wrapper {
     padding: 1.5em 0 1em 0;
     position: fixed;
+    overflow-x: hidden;
     overflow-y: auto;
     left: 0;
     right: 0;

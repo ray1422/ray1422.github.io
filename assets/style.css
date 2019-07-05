@@ -27,6 +27,9 @@ body {
     background: #191f26 url('./images/loading.gif') no-repeat center / auto 50% fixed;
     text-align: justify;
 }
+body, input {
+    font-family: -apple-system, system-ui, "Noto Sans CJK TC Regular", "微軟正黑體";
+}
 
 #wrapper {
     padding: 1.5em 0 1em 0;

@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/ray1422
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://ray1422.github.io
+  * I am ray1422 (https://keybase.io/ray1422) on keybase.
+  * I have a public key ASAB4zle2dVatvdcd4motx4c8ejn4NYmX0MB9Dq0AFKEcQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01200fb79d3be799cba97bf210397df633b31867f146f55f92f2f559fea5dfeb3dda0a",
+      "host": "keybase.io",
+      "kid": "012001e3395ed9d55ab6f75c7789a8b71e1cf1e8e7e0d6265f4301f43ab4005284710a",
+      "uid": "5996cb010d18556d0e1f54e5b02ef119",
+      "username": "ray1422"
+    },
+    "merkle_root": {
+      "ctime": 1562371764,
+      "hash": "fa8d5388fff0c09ef19a814a64ce3d4d801ebf8395e778f7d5e6625766fbd05d4819692596e03d2b53390aab31f67680ad302f47b2e4a42faa579ecb9523d5fc",
+      "hash_meta": "135fbf22bee80929ad7707cba941aa0d8c838893e5cd1026dd88a44c8fb0de6b",
+      "seqno": 5703458
+    },
+    "service": {
+      "entropy": "r/0lFkrrnf41Krz8qXycAm6n",
+      "hostname": "ray1422.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.1.0"
+  },
+  "ctime": 1562371786,
+  "expire_in": 504576000,
+  "prev": "8c6a74d3bd2e8da4c958b6a66611fadd87c98dc03a5b754b349068ea272821dd",
+  "seqno": 47,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgAeM5XtnVWrb3XHeJqLceHPHo5+DWJl9DAfQ6tABShHEKp3BheWxvYWTESpcCL8QgjGp0070ujaTJWLamZhH63YfJjcA6W3VLNJBo6icoId3EIDkynEwVESr2C1BabQTLVodi7hZyT3431nrBHUtNe/osAgHCo3NpZ8RAcyd4+G6VYyZTV7bVzklE1Il9J0C3KYPKJxRNqzueBIkMQ99k9mGaPjLC6Xk15wMms28GI0Hivm72W9ZDi+WUCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINCS8A6rt3amnnOK9CxzTDN+oyk1TEVaz/ux9Hb7IXV+o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ray1422
+
+==================================================================

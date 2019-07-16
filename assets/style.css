@@ -308,6 +308,18 @@ a {
     object-fit: cover;
 }
 
+@media screen and (min-width: 1025px) {
+    #experience {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 80em;
+    }
+    #experience li {
+        max-width: 22em;
+        width: 50%;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .section::before {
         background: rgba(10, 10, 10, .6);

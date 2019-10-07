@@ -31,7 +31,20 @@ html, body, input, button {
     font-family: -apple-system, "Noto Sans CJK TC", "微軟正黑體";
 
 }
-
+#unsupport_browser {
+    display: none;
+    background: rgba(10,10,10,.5);
+    padding-top: .6rem;
+    padding-bottom: 1.6rem;
+}
+#unsupport_browser * {
+    filter: none;
+    color: #0f0;
+    opacity: 1;
+}
+#unsupport_browser h2 {
+    color: red;
+}
 #wrapper {
     padding: 1.5em 0 1em 0;
     position: fixed;
@@ -455,4 +468,51 @@ a {
         float: right;
         margin: 1.6rem 0 1rem 1rem;
     }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+    #unsupport_browser {
+        display: block;
+    }
+    * {
+        -webkit-text-fill-color:unset !important;
+    }
+    a {
+        -webkit-text-fill-color: unset;
+        color: rgba(0, 200, 255, .9);
+    }
+    .section::before {
+        background: rgba(10, 10, 10, .6);
+    }
+    .section .content {
+        background: none;
+        background-size: 1em 1em;
+        opacity: .95;
+        color: rgba(255,255,255,.8);
+        font-weight: 400;
+        margin: .5em 0;
+    }
+}
+@supports (-ms-ime-align:auto) {
+    #unsupport_browser {
+        display: block;
+    }
+    * {
+        -webkit-text-fill-color:unset !important;
+    }
+    a {
+        -webkit-text-fill-color: unset;
+        color: rgba(0, 200, 255, .9);
+    }
+    .section::before {
+        background: rgba(10, 10, 10, .6);
+    }
+    .section .content {
+        background: none;
+        background-size: 1em 1em;
+        opacity: .95;
+        color: rgba(255,255,255,.8);
+        font-weight: 400;
+        margin: .5em 0;
+    }
+
 }

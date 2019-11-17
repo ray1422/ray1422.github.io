@@ -60,7 +60,7 @@ function goPage(pagePath, state) {
 
 function updateEventListener() {
     $("a").click(function (event) {
-        if ($(this).attr("href").substring(0, 4) != 'http' && $(this).attr("href") != "#") {
+        if ($(this).attr("href").substring(0, 4) != 'http' && $(this).attr("href") != "#" && $(this).attr("data-ajax") != 'false') {
             goPage($(this).attr("href"))
             event.preventDefault();
         }

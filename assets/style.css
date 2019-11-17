@@ -141,12 +141,12 @@ a {
 
 #main_nav a::before {
     content: '✵ ';
-    padding: 0 .6rem;
+    padding: 0 .4rem;
 }
 
 #main_nav a:first-child:before {
     content: '';
-    padding: 0 .6rem;
+    padding: 0 .4rem;
 }
 
 .social_links {
@@ -435,6 +435,7 @@ a {
     }
     #header.mini #no_life #links_wrapper {
         padding-top: 0;
+        padding-right: 8px;
         margin-top: -3px;
         height: 40%;
         text-align: right;

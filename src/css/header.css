@@ -3,6 +3,9 @@
     transition-property: height, width, opacity, margin, margin-left, padding, font-size, max-width, transform;
     transition-property: all;
 }
+.header.section {
+    margin-top: .3rem;
+}
 .header {
     margin-top: .3rem;
     padding: 0 1rem;

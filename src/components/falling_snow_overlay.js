@@ -7,8 +7,9 @@ import snowIMG from '../assets/images/textures/snow.png'
 function update() {
     const holder = document.getElementsByClassName("falling_snow_overlay")[0]
     if (holder == undefined) {
+        console.log("holder undefined!")
         setTimeout(() => {
-            update();
+            update(holder);
         }, 0);
         return
     }
@@ -162,13 +163,18 @@ void main() {
 }
 
 class FallingSnowOverlay extends React.Component {
+    componentDidMount() {
+        setTimeout(() => {
+            update()    
+        }, 3000);
+    }
     render(props) {
-        window.addEventListener("DOMContentLoaded", function () {
-            setTimeout(
-                () => { update() },
-                3000
-            )
-        }, false);
+        if (window.localStorage.disableFallingSnow == 'true') {
+            return null;
+        }
+        // window.addEventListener("DOMContentLoaded", function () {
+        
+        // }, false);
 
         const style = {
             transition: 'ease 8s top, opacity',
@@ -176,7 +182,7 @@ class FallingSnowOverlay extends React.Component {
             opacity: 0
         }
         return (
-            <div className="falling_snow_overlay" style={style} onLoad={update}>
+            <div className="falling_snow_overlay" style={style}>
             </div>
         )
     }

@@ -1,0 +1,177 @@
+.header * {
+    transition: ease .5s;
+    transition-property: height, width, opacity, margin, margin-left, padding, font-size, max-width, transform;
+    transition-property: all;
+}
+.header {
+    margin-top: .3rem;
+    padding: 0 1rem;
+    width: calc(100% - .5rem * 2);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header.expand {
+    width: 80%;
+    margin-top: 1rem;
+}
+.header > * {
+    flex: 1;
+}
+.header .avatar_wrapper {
+    max-width: 2rem;
+}
+.header.expand .avatar_wrapper {
+    max-width: 6rem;
+}
+.header .avatar {
+    width: 2em;
+    height: 2em;
+    border-radius: 3px;
+    padding: 0;
+    overflow: hidden;
+}
+.header .avatar img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 1px 1px 5px rgba(10, 10, 10, .9);
+    transform: scale(1.5);
+}
+
+.header .title_box {
+    margin-left: .9rem;
+    white-space: nowrap;
+}
+
+.header .title_box h1 {
+    margin: 0rem 0 .1rem 0;
+    font-size: 1.2rem;
+}
+.header .title_box h3 {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.header .nav {
+    min-width: 15rem;
+    width: 15rem;
+}
+.header .nav ul, .header .nav ul a {
+    text-decoration: none;
+    color: aqua;
+    width: auto;
+}
+
+.header .nav ul {
+    text-align: right;
+    margin: .3rem 0 .7rem 0;
+    vertical-align: middle;
+}   
+.header .nav li:not(:first-child)::before {
+    content: '✵';
+    font-size: .6em;
+    margin: 0 .4rem;
+}
+.header .nav li {
+    display: inline-block;
+}
+
+.header.expand {
+    padding: 1.2rem;
+}
+.header.expand .avatar {
+    width: 6rem;
+    height: 6rem;
+}
+.header.expand .title_box {
+    margin-left: 0;
+}
+.header.expand .title_box h1 {
+    margin: .5rem 0;
+    font-size: 1.6rem;
+    white-space:nowrap; 
+}
+.header.expand .title_box h3 {
+    opacity: 1;
+    margin: .8rem 0 0;
+    font-size: 1rem;
+    white-space:nowrap;
+    height: 1.5rem;;
+}
+
+
+.header.expand .avatar img {
+    transform: scale(1.1);
+}
+
+.header.expand .title_box {
+    margin: -.2rem 0 .2rem 2rem;
+}
+
+.header.expand .title_box h1 {
+    margin: .5rem 0;
+    font-size: 1.8rem;
+}
+.header.expand .title_box h3 {
+    margin: .8rem 0 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .header.expand {
+        width: 95%;
+        margin-top: 1rem;
+    }
+    
+    .header.expand .title_box {
+        margin-left: 1rem;
+    }
+    .header.expand .title_box h1 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    .header.expand .title_box h3 {
+        margin: .8rem 0 0 .1rem;
+        font-size: .9rem;
+    }
+}
+@media (max-width: 450px) {
+    .header.expand {
+        width: 95%;
+        margin-top: 1rem;
+        padding: .5rem;
+    }
+    /* .header.expand .title_box {
+        margin-left: 1rem;
+    } */
+    .header.expand .avatar_wrapper {
+        max-width: 3rem;
+    }
+    .header.expand .title_box {
+        margin: 0 0 0 1rem;
+        word-wrap: no-wrap;
+        word-break: keep-all;
+        white-space:nowrap;
+    }
+    .header.expand .title_box h1 {
+        margin: 0;
+        font-size: 4vw;
+    }
+    .header.expand .title_box h3 {
+        margin: .2rem 0 0 .1rem;
+        font-size: 3.5vw;
+    }
+    .header {
+        padding: 5px;
+    }
+    .header.expand .avatar {
+        width: 3rem;
+        height: 3rem;
+    }
+    .header.expand .title_box h1 {
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,26 @@
+.falling_snow_overlay {
+    position: fixed;
+    top:0; right:0; left:0;
+    height: 50vh;
+    user-select: none;
+    background: transparent;
+    pointer-events: none;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    z-index: 99999;
+    /* will-change: none; */
+}
+.falling_snow_overlay canvas {
+    position: relative;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@media (orientation: portrait) {
+    .falling_snow_overlay {
+        height: 30vh;
+    }
+}

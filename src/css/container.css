@@ -1,0 +1,238 @@
+
+
+* {
+    box-sizing: border-box;
+}
+.webp.no-jpeg2000 body {
+    background-image: url('../assets/images/bg.webp');
+}
+.jpeg2000 body {
+    background-image: url('../assets/images/bg.jp2');
+}
+.no-webp body {
+    background-image: url('../assets/images/bg.jpg');
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 100vh;
+    font-family: "Noto Sans CJK TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", "微軟正黑體", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+}
+a {
+    color: aqua;
+}
+a:visited {
+    color: aquamarine;
+}
+
+
+.section {
+    background: rgba(0, 0, 0, .45);
+    border-radius: 4px;
+    padding: 1rem;
+    min-height: 3rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+    box-shadow: 0 0 4px rgba(3, 3, 3, .8);
+    transition: ease 1s;
+    transition-property: width, height, margin, padding, opacity, min-height, min-width, transform;
+    /* transform: translateZ(0); */
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    will-change: transform;
+}
+.section:first-child {
+    margin-top: 2rem;
+}
+.section:last-child {
+    margin-bottom: 2rem;
+}
+/* Maybe some day
+@supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+    .section {
+        backdrop-filter: blur(3px) brightness(60%);
+        -webkit-backdrop-filter: blur(3px) brightness(60%);
+    }
+}
+@supports not ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+    .section {
+        background: none;
+        position: relative;
+    }
+    .section::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        bottom: -3px;
+        left: -3px;
+        filter: blur(3px) brightness(60%);
+        background: url(../assets/images/bg.jpg) no-repeat center / cover fixed;
+    }
+}
+
+*/
+
+@supports ((background-clip: text) or (-webkit-background-clip: text)) and (-webkit-text-fill-color: transparent){
+    .webp.no-jpeg2000 .text_texture.crystal, .webp.no-jpeg2000 .text_texture.crystal * {
+        background-image: url('../assets/images/textures/crystal.webp');
+    }
+    .jpeg2000 .text_texture.crystal, .jpeg2000 .text_texture.crystal * {
+        background-image: url('../assets/images/textures/crystal.jp2');
+    }
+    .no-webp.webp.no-jpeg2000 .text_texture.crystal, .no-webp.webp.no-jpeg2000 .text_texture.crystal * {
+        background-image: url('../assets/images/textures/crystal.png');
+    }
+    
+    .text_texture.crystal, .text_texture.crystal * {
+        background-repeat: repeat;
+        background-color: #ddddff;
+        background-size: 1em 1em;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: .95;
+        filter: brightness(1.06) drop-shadow(1px 1px 3px rgba(10, 10, 10, .7));
+        font-weight: 600;
+    }
+    a.text_texture.crystal, .text_texture.crystal a {
+        -webkit-text-fill-color: rgba(0, 200, 255, .3);
+    }
+    .section h2.text_texture.crystal {
+        -webkit-text-fill-color: rgba(0, 180, 255, 0.3);
+    }
+}
+
+
+@supports not (((background-clip: text) or (-webkit-background-clip: text)) and (-webkit-text-fill-color: transparent)) {
+    .text_texture.crystal {
+        color: white;
+    }
+    a.text_texture.crystal, .text_texture.crystal a  {
+        color: blue;
+    }
+}
+@media (max-width: 1024px) {
+    .section {
+        width: 90%;
+    }
+}
+@media (max-width: 600px) {
+    .section {
+        width: 95%;
+    }
+}
+.section h2 {
+    margin: .1rem 0;
+}
+
+
+.outer_wrapper {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: 5px;
+}
+
+.outer_wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+   
+.outer_wrapper::-webkit-scrollbar-thumb {
+    background: rgba(160, 160, 160, .1);
+    transition: ease-in-out .6s all;
+    border-radius: 3px;
+}
+.outer_wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(160, 160, 160, .5); 
+}
+
+.ani_wrap {
+    position: relative;
+
+}
+.ani_item {
+    position:absolute;
+    top:0;
+    width: 100%;
+
+    animation: fade 1s ease-in-out 1s;
+    animation-fill-mode: both;
+}
+
+ 
+/* @keyframes fade {
+    0% {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    0.01% {
+        height: auto;
+        overflow: visible;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-enter {
+    opacity: 0;
+    transition: all ease 1s;
+    transition-delay: .5s;
+}
+.fade-enter.fade-enter-active {
+    opacity: 1;
+}
+
+
+.fade-exit {
+    opacity: 1;
+}
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: all ease .5s;
+    
+} */
+
+
+
+.ani_item  {
+    animation: a-routeFadeIn 0.5s ease 0.3s;
+    animation-fill-mode: both;
+    transform: translateY(0);
+    opacity:1;
+    will-change: transform,opacity;
+}
+ 
+@keyframes a-routeFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+ 
+.ani_item.fade-exit {
+    animation: none;
+    animation-fill-mode: none;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+ 
+.ani_item.fade-exit-active {
+    opacity: 0;
+}

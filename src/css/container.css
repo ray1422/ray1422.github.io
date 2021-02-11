@@ -81,29 +81,31 @@ a:visited {
 */
 
 @supports ((background-clip: text) or (-webkit-background-clip: text)) and (-webkit-text-fill-color: transparent){
-    .webp.no-jpeg2000 .text_texture.crystal, .webp.no-jpeg2000 .text_texture.crystal * {
+    .webp.no-jpeg2000 .text_texture.crystal {
         background-image: url('../assets/images/textures/crystal.webp');
     }
-    .jpeg2000 .text_texture.crystal, .jpeg2000 .text_texture.crystal * {
+    .jpeg2000 .text_texture.crystal {
         background-image: url('../assets/images/textures/crystal.jp2');
     }
-    .no-webp.webp.no-jpeg2000 .text_texture.crystal, .no-webp.webp.no-jpeg2000 .text_texture.crystal * {
+    .no-webp.webp.no-jpeg2000 .text_texture.crystal {
         background-image: url('../assets/images/textures/crystal.png');
     }
     
-    .text_texture.crystal, .text_texture.crystal * {
+    .text_texture.crystal {
+        opacity: .9;
         background-repeat: repeat;
         background-color: #ddddff;
         background-size: 1em 1em;
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        opacity: .95;
         filter: brightness(1.06) drop-shadow(1px 1px 3px rgba(10, 10, 10, .7));
         font-weight: 600;
     }
     a.text_texture.crystal, .text_texture.crystal a {
         -webkit-text-fill-color: rgba(0, 200, 255, .3);
+        display: inline-block;
+        text-decoration: none;
     }
     .section h2.text_texture.crystal {
         -webkit-text-fill-color: rgba(0, 180, 255, 0.3);

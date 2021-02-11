@@ -19,19 +19,23 @@ export default (props) => {
     return (
         <div className="ani_item">
             <Section>
+                <h2 className="text_texture crystal">Ray的異世界</h2>
+                <div className="text_texture crystal">就是我的個人網站啦</div>
+            </Section>
+            <Section>
                 <h2 className="text_texture crystal">相關連結</h2>
-                <ul className="text_texture crystal">
-                    <li><a href="https://ray-fish.me/blog" target="_BLANK">Blog</a></li>
+                <ul>
+                    <li><a className="text_texture crystal" href="https://ray-fish.me/blog" target="_BLANK">Blog</a></li>
                 </ul>
             </Section>
             <Section>
-                <h2 className="text_texture crystal">設定</h2>
-                <div className="text_texture crystal">
+                <h2>設定</h2>
+                <div>
                     {window.localStorage.disableFallingSnow != "true" &&
-                        <a href="" onClick={disableSnow}>關掉下雪</a>
+                        <a className="text_texture crystal" href="" onClick={disableSnow}>關掉下雪</a>
                     }
                     {window.localStorage.disableFallingSnow == 'true' &&
-                        <a href="" onClick={enableSnow}>打開下雪</a>
+                        <a className="text_texture crystal" href="" onClick={enableSnow}>打開下雪</a>
                     }
                 </div>
             </Section>

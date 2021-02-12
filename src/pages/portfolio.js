@@ -1,11 +1,19 @@
+
 import React, { useEffect } from 'react'
 import { Section } from '../components/container'
-import ff_img from '../assets/images/collections/fantastic_filter.jpg'
+import ff_img from "../assets/images/collections/fantastic_filter.jpg"
 import ff_img_webp from '../assets/images/collections/fantastic_filter.webp'
 
 import chisc_img from '../assets/images/collections/chisc.jpg'
 import chisc_img_webp from '../assets/images/collections/chisc.webp'
+
+import Image from '../utils/image'
+
+
+
 import '../css/protfolio.css'
+
+
 export default (props) => {
     useEffect(() => {
         props.setExpandHeader(false)
@@ -28,7 +36,7 @@ export default (props) => {
                         </p>
                         <picture>
                             <source srcSet={ff_img_webp} />
-                            <img src={ff_img} />
+                            <Image src={ff_img} />
                         </picture>
                     </div>
                 </div>
@@ -41,11 +49,11 @@ export default (props) => {
                             中和高中資訊研究社的官方網站（存檔）。
                         </p>
                         <p className="text_texture crystal">
-                            透過簡潔的材料設計，搭配生動的色彩，創造出高中社團年輕卻充實、進取向上的形象。
+                            透過簡潔的<acronym title="Material Design">材料設計</acronym>，搭配生動的色彩，創造出高中社團年輕卻充實、進取向上的形象。
                         </p>
                         <picture>
                             <source srcSet={chisc_img_webp} />
-                            <img src={chisc_img} />
+                            <Image src={chisc_img} />
                         </picture>
                     </div>
                 </div>

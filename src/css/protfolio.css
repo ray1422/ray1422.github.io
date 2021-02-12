@@ -1,3 +1,6 @@
+.project {
+    margin-bottom: 2.5rem;
+}
 .project .description{
     margin-left: 1rem;
 }
@@ -8,12 +11,13 @@
     background: transparent;
     filter: none !important;
     -webkit-filter: none !important;
-    width: 80vw;
-    height: 48vw;
+    width: 80%;
     max-width: 50rem;
     max-height: 30rem;
-    object-fit: contain;
-    object-position: top center;
-    margin: 1.9rem auto 0;
+    margin: 1.5rem auto 0 auto;
     padding-right: 1rem;
+}
+
+.description > p:first-child {
+    margin-top: 0;
 }

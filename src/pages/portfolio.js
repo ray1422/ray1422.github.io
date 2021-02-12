@@ -3,15 +3,12 @@ import React, { useEffect } from 'react'
 import { Section } from '../components/container'
 import ff_img from "../assets/images/collections/fantastic_filter.jpg"
 import ff_img_webp from '../assets/images/collections/fantastic_filter.webp'
-
 import chisc_img from '../assets/images/collections/chisc.jpg'
 import chisc_img_webp from '../assets/images/collections/chisc.webp'
-
 import Image from '../utils/image'
-
-
-
 import '../css/protfolio.css'
+
+import 'lazysizes';
 
 
 export default (props) => {
@@ -36,7 +33,7 @@ export default (props) => {
                         </p>
                         <picture>
                             <source srcSet={ff_img_webp} />
-                            <Image src={ff_img} />
+                            <img data-src={ff_img} className="lazyload" />
                         </picture>
                     </div>
                 </div>
@@ -53,7 +50,7 @@ export default (props) => {
                         </p>
                         <picture>
                             <source srcSet={chisc_img_webp} />
-                            <Image src={chisc_img} />
+                            <img data-src={ff_img} className="lazyload" />
                         </picture>
                     </div>
                 </div>

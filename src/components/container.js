@@ -49,6 +49,7 @@ export const OuterWrapper = (props) => {
                 <Header expand={expandHeader}></Header>
                 <AnimatedSwitch setFallingSnow={setFallingSnow} setExpandHeader={setExpandHeader} />
             </Router>
+            <div style={{height: '2rem'}}></div>
         </div>
     )
 }

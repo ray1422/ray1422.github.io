@@ -1,27 +1,22 @@
 import { Link } from 'react-router-dom'
 import avatar from '../assets/images/ray.jpg'
 import avatar_webp from '../assets/images/ray.webp'
-import { detectAnyAdblocker } from 'just-detect-adblock'
-import { Section } from '../components/container'
 import '../css/header.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, lazy, Suspense } from 'react'
 
 export default function Header(props) {
     const [adBlockStat, setAdBlockStat] = useState(false)
-    useEffect(() => {
-        detectAnyAdblocker().then((stat)=> {
-            setAdBlockStat(stat);
-        })
-    }, [])
-    let AdBlockWarning = null
-    if (adBlockStat) {
-        AdBlockWarning = (
-            <Section>
-                <h2 style={{ color: "red" }}>什麼，你居然在使用 AdBlock⁉️</h2>
-                <div style={{ color: "yellow", fontWeight: 600 }}>雖然這裡沒有廣告，但是我就是要說:P</div>
-            </Section>
+    const [gtagBlockStat, setgtagBlockStat] = useState(false)
+    const AdBlockWarning = lazy(() => import('./block_warning').then(module => ({ default: module.AdBlockDetection })))
+    const GTagBlockWarning = lazy(() => import('./block_warning').then(module => ({ default: module.GTagBlockDetection })))
+    let blockDetections = null;
+    if (window.localStorage.disableBlockDetections !== "true")
+        blockDetections = (
+            <Suspense fallback={null}>
+                <AdBlockWarning />
+                <GTagBlockWarning />
+            </Suspense>
         )
-    }
 
     return (
         <div>
@@ -46,7 +41,7 @@ export default function Header(props) {
                     </ul>
                 </nav>
             </div>
-            { AdBlockWarning}
+            {blockDetections}
         </div>
     )
 }

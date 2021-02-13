@@ -55,7 +55,7 @@ export const OuterWrapper = (props) => {
 }
 export const Section = (props) => {
     return (
-        <div className="section">
+        <div {...props} style={props.style} className={"section " + (props.className != undefined ? props.className : "")}>
             {props.children}
         </div>
     )

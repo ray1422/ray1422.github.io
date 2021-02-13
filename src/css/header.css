@@ -38,7 +38,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    box-shadow: 1px 1px 5px rgba(10, 10, 10, .9);
+    box-shadow: 10px 10px 5px rgba(10, 10, 10, .9);
     transform: scale(1.5);
 }
 
@@ -178,3 +178,30 @@
         font-size: 1.1rem;
     }
 }
+
+
+@keyframes videoAni {
+    0% {
+        box-shadow: 3px 3px 10px blue, 5px 5px 10px red;
+        filter: brightness(120%) saturate(120%);
+        transform: rotate3d(1,0,0, 20deg);
+    }
+    25% {
+        box-shadow: 5px -5px 10px red, -3px 3px 10px blue;
+        transform: rotate3d(0,1,0, 20deg);
+        
+    }
+    50% {
+        box-shadow: -3px -3px 10px blue, -5px -5px 10px red;
+        filter: brightness(80%) saturate(80%);
+        transform: rotate3d(-1,0,0, 20deg);
+    }
+    75% {
+        box-shadow: 3px -3px 10px blue, -5px 5px 10px red;
+        transform: rotate3d(0,-1,0, 20deg);
+    }
+    100% {
+        box-shadow: 3px 3px 10px blue, 5px 5px 10px red;
+        transform: rotate3d(1,0,0, 20deg);
+    }
+  }

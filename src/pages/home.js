@@ -14,6 +14,16 @@ function enableSnow(event) {
     event.preventDefault()
     window.history.go(0)
 }
+function disableBlockDetections(event) {
+    window.localStorage.disableBlockDetections = 'true'
+    event.preventDefault()
+    window.history.go(0)
+}
+function enableBlockDetections(event) {
+    window.localStorage.disableBlockDetections = null
+    event.preventDefault()
+    window.history.go(0)
+}
 export default (props) => {
     useEffect(() => { props.setExpandHeader(true) })
     return (
@@ -36,6 +46,13 @@ export default (props) => {
                     }
                     {window.localStorage.disableFallingSnow == 'true' &&
                         <a className="text_texture crystal" href="" onClick={enableSnow}>打開下雪</a>
+                    }
+                    <br />
+                    {window.localStorage.disableBlockDetections != "true" &&
+                        <a className="text_texture crystal" href="" onClick={disableBlockDetections}>關掉擋廣告偵測</a>
+                    }
+                    {window.localStorage.disableBlockDetections == 'true' &&
+                        <a className="text_texture crystal" href="" onClick={enableBlockDetections}>開啟擋廣告偵測</a>
                     }
                 </div>
             </Section>

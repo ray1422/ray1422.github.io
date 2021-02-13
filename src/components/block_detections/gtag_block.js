@@ -35,15 +35,17 @@ export default class GTagBlockDetection extends Detection {
             //     resolve(result !== true);
             // } catch (e) { console.log(e) }
             // }, 3000)
-            fetch('https://www.google-analytics.com/collect').then(function (response) {
-                resolve(false)
-                if (!response.ok) {
-                    throw Error(response.statusText);
-                }
-                return response;
-            }).then(function (response) { }).catch(function (error) {
-                resolve(true)
-            });
+            setTimeout(() => {
+                fetch('https://www.google-analytics.com/collect').then(function (response) {
+                    if (!response.ok) {
+                        throw Error(response.statusText);
+                    }
+                    resolve(false)
+                    return response;
+                }).then(function (response) { }).catch(function (error) {
+                    resolve(true)
+                });
+            }, 3000)
         })
     }
 }

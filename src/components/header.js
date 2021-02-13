@@ -7,8 +7,8 @@ import { useEffect, useState, lazy, Suspense } from 'react'
 export default function Header(props) {
     const [adBlockStat, setAdBlockStat] = useState(false)
     const [gtagBlockStat, setgtagBlockStat] = useState(false)
-    const AdBlockWarning = lazy(() => import('./block_warning').then(module => ({ default: module.AdBlockDetection })))
-    const GTagBlockWarning = lazy(() => import('./block_warning').then(module => ({ default: module.GTagBlockDetection })))
+    const AdBlockWarning = lazy(() => import('./block_detections/ad_block'))
+    const GTagBlockWarning = lazy(() => import('./block_detections/gtag_block'))
     let blockDetections = null;
     if (window.localStorage.disableBlockDetections !== "true")
         blockDetections = (

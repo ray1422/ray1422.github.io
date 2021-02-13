@@ -38,7 +38,7 @@ export default (props) => {
                     </div>
                 </div>
                 <div className="project">
-                    <a className="text_texture crystal" href="https://ray-fish.me/Fantastic-Filter-Professional-Plus/">
+                    <a className="text_texture crystal" href="https://ray-fish.me/chisc/">
                         <h3>中和資研社 官網</h3>
                     </a>
                     <div className="description">

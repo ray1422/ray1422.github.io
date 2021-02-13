@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import music from '../assets/sounds/easter_egg_music.mp3'
 import { detectAnyAdblocker } from 'just-detect-adblock'
@@ -44,16 +44,21 @@ export default class Detection extends React.Component {
         }
     }
     componentDidMount() {
+        this.mounted = true
         this.detect().then((detected) => {
             if (detected) {
                 this.ifDetected()
                 let state = Object.assign({}, this.state)
                 state.detected = detected
-                this.setState(state)
+                if (this.mounted) this.setState(state)
             } else {
                 this.ifNotDetected()
             }
         })
+        return
+    }
+    componentWillUnmount(){
+        this.mounted = false
     }
     detect() {
         return new Promise((resolve, reject) => { resolve(false); })

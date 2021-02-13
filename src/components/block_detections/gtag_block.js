@@ -29,12 +29,21 @@ export default class GTagBlockDetection extends Detection {
     detect() {
         return new Promise((resolve, reject) => {
             // setTimeout(() => {
-            try {
-                const result = window.dataLayer.push('www');
-                // console.log(result)
-                resolve(result !== true);
-            } catch (e) { console.log(e) }
+            // try {
+            //     const result = window.dataLayer.push('www');
+            //     // console.log(result)
+            //     resolve(result !== true);
+            // } catch (e) { console.log(e) }
             // }, 3000)
+            fetch('https://www.google-analytics.com/collect').then(function (response) {
+                resolve(false)
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                return response;
+            }).then(function (response) { }).catch(function (error) {
+                resolve(true)
+            });
         })
     }
 }

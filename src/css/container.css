@@ -82,7 +82,7 @@ a:visited {
     margin-top: 1rem;
     box-shadow: 0 0 4px rgba(3, 3, 3, .8);
     transition: ease 1s;
-    transition-property: width, height, margin, padding, opacity, min-height, min-width, transform, background-color;
+    transition-property: width, height, margin, padding, opacity, min-height, min-width, transform, background-color,color,box-shadow,-webkit-text-fill-color,text-fill-color;
     /* transform: translateZ(0); */
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
@@ -157,10 +157,10 @@ a:visited {
 }
 
 .light_theme .section h2.text_texture.text_texture.crystal {
+    text-shadow: 0 0 0 white;
     color:  rgba(0, 180, 255, 1);
-    -webkit-text-fill-color: unset;
-    text-fill-color: unset;
-    text-shadow: none;
+    -webkit-text-fill-color: rgba(0, 180, 255, 1);
+    text-fill-color: rgba(0, 180, 255, 1);
 }
 
 

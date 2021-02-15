@@ -39,6 +39,21 @@ const AnimatedSwitch = (props) => {
 export const OuterWrapper = (props) => {
     const [fallingSnow, setFallingSnow] = useState(true)
     const [expandHeader, setExpandHeader] = useState(false)
+    useEffect(() => {
+        console.log(window.localStorage.theme)
+        if (window.localStorage.theme == undefined) {
+            if (window.matchMedia('(prefers-color-scheme: light)').matches === true) {
+                window.localStorage.theme = 'light'
+                document.body.classList.add("light_theme")
+            }
+        } else {
+            const themeStr = window.localStorage.theme
+            if (themeStr === 'light') document.body.classList.add('light_theme')
+            else document.body.classList.remove('light_theme')
+        
+        }
+
+    })
     return (
         <div className="outer_wrapper">
             {
@@ -49,7 +64,7 @@ export const OuterWrapper = (props) => {
                 <Header expand={expandHeader}></Header>
                 <AnimatedSwitch setFallingSnow={setFallingSnow} setExpandHeader={setExpandHeader} />
             </Router>
-            <div style={{height: '2rem'}}></div>
+            <div style={{ height: '2rem' }}></div>
         </div>
     )
 }

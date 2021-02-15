@@ -6,7 +6,7 @@ export default class GTagBlockDetection extends Detection {
         super(...props)
         this.clickCnt = 0
         this.content = (
-            <Section onClick={(e) => { this.onClick(e) }} className="ad_dection" style={{ userSelect: "none" }}>
+            <Section onClick={(e) => { this.onClick(e) }} className="ad_dection force_dark" style={{ userSelect: "none" }}>
                 <h2 style={{ color: "red" }}>什麼，你居然禁止 GTag 追蹤⁉️</h2>
                 <div style={{ color: "yellow", fontWeight: 600 }}>
                     聽話，讓我看看！

@@ -67,6 +67,11 @@
     color: aqua;
     width: auto;
 }
+.light_theme .header .nav ul, .header .nav ul a {
+    text-decoration: none;
+    color: aqua;
+    width: auto;
+}
 
 .header .nav ul {
     text-align: right;

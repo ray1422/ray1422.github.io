@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import App from '../App'
-import { Section, OuterWrapper } from '../components/container'
-import falling_snow_overlay from '../components/falling_snow_overlay'
+import ThemeToggle from '../components/theme_toggle'
+import { Section } from '../components/container'
 import '../css/home.css'
 function disableSnow(event) {
     window.localStorage.disableFallingSnow = 'true';
@@ -54,6 +53,8 @@ export default (props) => {
                     {window.localStorage.disableBlockDetections == 'true' &&
                         <a className="text_texture crystal" href="" onClick={enableBlockDetections}>開啟擋廣告偵測</a>
                     }
+                    <br />
+                    <ThemeToggle />
                 </div>
             </Section>
         </div>

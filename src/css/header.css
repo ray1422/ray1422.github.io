@@ -1,7 +1,6 @@
 .header * {
     transition: ease .5s;
-    transition-property: height, width, opacity, margin, margin-left, padding, font-size, max-width, transform;
-    transition-property: all;
+    transition-property: opacity,height,padding,padding-left,margin,margin-left,width,transform,max-width,font-size;
 }
 .header.section {
     margin-top: .3rem;

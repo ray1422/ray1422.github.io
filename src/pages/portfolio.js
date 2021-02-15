@@ -20,15 +20,15 @@ export default (props) => {
         <div className="ani_item">
             <Section>
                 <h2 className="text_texture crystal">作品叢</h2>
-                <div className="project text_texture crystal">
-                    <a href="https://ray-fish.me/Fantastic-Filter-Professional-Plus/">
+                <div className="project">
+                    <a className=" text_texture crystal" href="https://ray-fish.me/Fantastic-Filter-Professional-Plus/">
                         <h3>幻想濾鏡</h3>
                     </a>
                     <div className="description">
-                        <p>
+                        <p className=" text_texture crystal">
                             一個簡單並且強大的修圖工具，用以去除手機夜拍照片中惱人的噪點，並且自動調色、提昇畫質。採用深度神經網路打造，僅須輸入照片並點擊開始。
                         </p>
-                        <p>
+                        <p className=" text_texture crystal">
                             我們提供跨平台桌面 GUI（支援 CUDA！）、Android APP，若您偏好使用文字界面，我們也有 Fantastic Filter CLI 可以使用。
                         </p>
                         <picture>

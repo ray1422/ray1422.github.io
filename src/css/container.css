@@ -32,7 +32,7 @@ body {
     background-image: url('../assets/images/bg-light.webp');
 }
 .no-webp.jpeg2000 body.light_theme {
-    background-image: url('../assets/images/bg-light.jp2');
+    background-image: url('../assets/images/bg-light.jpg');
 }
 .no-webp body.light_theme {
     background-image: url('../assets/images/bg-light.jpg');

@@ -29,10 +29,10 @@ body {
 }
 
 .webp.no-jpeg2000 body.light_theme {
-    background-image: url('../assets/images/bg-light.jpg');
+    background-image: url('../assets/images/bg-light.webp');
 }
 .no-webp.jpeg2000 body.light_theme {
-    background-image: url('../assets/images/bg-light.jpg');
+    background-image: url('../assets/images/bg-light.jp2');
 }
 .no-webp body.light_theme {
     background-image: url('../assets/images/bg-light.jpg');

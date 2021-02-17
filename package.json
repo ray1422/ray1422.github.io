@@ -16,6 +16,7 @@
     "react-lazy-load-image-component": "^1.5.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
+    "react-toastify": "^7.0.3",
     "react-transition-group": "^4.4.1",
     "web-vitals": "^1.1.0"
   },

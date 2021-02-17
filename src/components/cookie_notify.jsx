@@ -15,7 +15,7 @@ export default function Foo(props) {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      onClose: ()=>{window.localStorage.useCookie = "true"}
+      onClose: () => { window.localStorage.useCookie = "true" }
     })
   })
 

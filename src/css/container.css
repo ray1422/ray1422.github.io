@@ -15,13 +15,13 @@
 
 
 body {
-    
     margin: 0;
     background-color: black;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-image: url('../assets/images/bg.webp');
     color: white;
     min-height: 100vh;
     font-family: "Noto Sans CJK TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", "微軟正黑體", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
@@ -43,7 +43,7 @@ body.light_theme {
     /* opacity: 0;
     content: '';
     z-index: -100; */
-    
+    background-image: url('../assets/images/bg-light.webp');
     background-color: white;
     background-size: cover;
     background-position: center;

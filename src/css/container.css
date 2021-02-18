@@ -44,7 +44,7 @@ body.light_theme {
     content: '';
     z-index: -100; */
     background-image: url('../assets/images/bg-light.webp');
-    background-color: white;
+    background-color: #ddefff;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

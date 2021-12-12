@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 .webp.no-jpeg2000 body {
-    background-image: url('../assets/images/bg.webp');
+    background-image: url('../assets/images/bg-1212-night.jpg');
 }
 .jpeg2000 body {
-    background-image: url('../assets/images/bg.jp2');
+    background-image: url('../assets/images/bg-1212-night.jpg');
 }
 .no-webp body {
-    background-image: url('../assets/images/bg.jpg');
+    background-image: url('../assets/images/bg-1212-night.jpg');
 }
 
 
@@ -18,10 +18,10 @@ body {
     margin: 0;
     background-color: black;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: url('../assets/images/bg.webp');
+    background-image: url('../assets/images/bg-1212-night.jpg');
     color: white;
     min-height: 100vh;
     font-family: "Noto Sans CJK TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", "微軟正黑體", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
@@ -29,13 +29,13 @@ body {
 }
 
 .webp.no-jpeg2000 body.light_theme {
-    background-image: url('../assets/images/bg-light.webp');
+    background-image: url('../assets/images/bg-1212-day.jpg');
 }
 .no-webp.jpeg2000 body.light_theme {
-    background-image: url('../assets/images/bg-light.jpg');
+    background-image: url('../assets/images/bg-1212-day.jpg');
 }
 .no-webp body.light_theme {
-    background-image: url('../assets/images/bg-light.jpg');
+    background-image: url('../assets/images/bg-1212-day.jpg');
 }
 
 body.light_theme {
@@ -43,10 +43,10 @@ body.light_theme {
     /* opacity: 0;
     content: '';
     z-index: -100; */
-    background-image: url('../assets/images/bg-light.webp');
+    background-image: url('../assets/images/bg-1212-day.jpg');
     background-color: #ddefff;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
     /* position: absolute;

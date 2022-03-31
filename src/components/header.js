@@ -42,6 +42,7 @@ export default function Header(props) {
                         <li><Link to="/">首頁</Link></li>
                         <li><Link to="/about">關於</Link></li>
                         <li><Link to="/portfolio">作品叢</Link></li>
+                        <li><Link to="/photography">攝影</Link></li>
                     </ul>
                 </nav>
             </div>

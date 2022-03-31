@@ -10,6 +10,7 @@ import '../css/container.css'
 const About = React.lazy(() => import('../pages/about.js'));
 const Home = React.lazy(() => import('../pages/home.js'));
 const Portfolio = React.lazy(() => import('../pages/portfolio.js'));
+const Photography = React.lazy(() => import('../pages/photography.js'));
 
 const AnimatedSwitch = (props) => {
     const location = useLocation()
@@ -22,6 +23,9 @@ const AnimatedSwitch = (props) => {
             <Suspense fallback={null}>
                 <Switch location={location}>
                     {/* <Route path="/about"><AniItem><About /></AniItem></Route> */}
+                    <Route path="/photography">
+                        <Photography setExpandHeader={props.setExpandHeader}/>
+                    </Route>
                     <Route path="/about">
                         <About setExpandHeader={props.setExpandHeader} />
                     </Route>

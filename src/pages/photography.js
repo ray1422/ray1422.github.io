@@ -21,6 +21,7 @@ class MyFeed extends EmbedInstagramFeed {
               "Segoe UI Emoji", "Segoe UI Symbol";
             background: rgba(0, 0, 0, 0);
             padding: 1rem;
+            text-shadow: 1px 1px 1px rgb(0 0 0 / 70%);
           }
           .nc-section a {
             text-decoration: none;

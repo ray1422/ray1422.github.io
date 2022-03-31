@@ -77,7 +77,8 @@ class MyFeed extends EmbedInstagramFeed {
           .nc-caption {
             font-size: 0.875rem;
             line-height: 1.25rem;
-            margin-bottom: 0.75rem;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
           }
     
           .nc-caption {
@@ -101,20 +102,20 @@ class MyFeed extends EmbedInstagramFeed {
     
           @media (min-width: 1024px) {
             .nc-feed {
-              grid-template-columns: repeat(4, minmax(0, 1fr));
+              grid-template-columns: repeat(3, minmax(0, 1fr));
             }
           }
     
           .nc-feed-item {
             width: 100%;
-            height: 300px;
-            background-color: #e2e8f0;
+            height: 200px;
+            background-color: transparent;
             margin-bottom: 0.5rem;
           }
           .nc-feed-item .nc-insta-image {
             width: 100%;
-            height: 300px;
-            object-fit: cover;
+            height: 200px;
+            object-fit: contain;
           }
           .nc-video {
             position: relative;
